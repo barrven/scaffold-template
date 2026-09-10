@@ -22,5 +22,7 @@ actually delivered.
    - **Something fails:** set `status: implementing`, `STATE.md` **Phase**
      back to `implement`, and write exactly what needs to change into
      Implementation Notes so `/implement` doesn't have to rediscover it.
-6. Update `features/BACKLOG.md`, append a `STATE.md` History line, and tell
-   the user the outcome and what's next.
+6. Update `features/BACKLOG.md`, append a `STATE.md` History line.
+7. Commit and push per `.claude/GIT.md` (stage: validate). Do not merge to
+   `master` if this bounced back to `implement`.
+8. Tell the user the outcome and what's next.

@@ -45,6 +45,7 @@ Everything else is written down so it isn't forgotten, then marked `deferred`.
    set **Phase** to `implement`; append a History line. If nothing was
    scheduled (open questions, or nothing left to build), do not advance to
    `implement` — say so and leave the phase as `features`.
-9. Report the backlog to the user (table form), clearly marking this
-   iteration's slice vs `deferred`, and name the active feature. Don't start
-   implementing — that's `/implement`'s job.
+9. Commit and push per `.claude/GIT.md` (stage: features).
+10. Report the backlog to the user (table form), clearly marking this
+    iteration's slice vs `deferred`, and name the active feature. Don't start
+    implementing — that's `/implement`'s job.

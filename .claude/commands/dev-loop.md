@@ -19,9 +19,10 @@ the loop to `/retro` before the slice is empty.
 
 The individual stages are documented in `.claude/commands/spec.md`,
 `features.md`, `implement.md`, `test.md`, `validate.md`, `accept.md`, and
-`retro.md`. Read the one you're about to run before running it, and follow
-its steps exactly — this command does not restate their logic, it sequences
-them.
+`retro.md`. Git is `.claude/GIT.md` — each stage commits/pushes itself
+(including first-`/spec` product-repo bootstrap). Read the stage command
+you're about to run before running it, and follow its steps exactly — this
+command does not restate their logic, it sequences them.
 
 Procedure:
 

@@ -17,4 +17,5 @@ You are running the **implement** stage of the dev loop's inner cycle
    touched, any tradeoffs) — terse, not a narrative.
 5. Set `status: testing`, update `features/BACKLOG.md`'s row for this
    feature, set `STATE.md` **Phase** to `test`, append a History line.
-6. Tell the user implementation is done and `/test` is next.
+6. Commit and push per `.claude/GIT.md` (stage: implement).
+7. Tell the user implementation is done and `/test` is next.

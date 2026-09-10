@@ -16,4 +16,5 @@ You are running the **test** stage of the dev loop's inner cycle.
    deliberately not, and why.
 5. Set `status: validating`, update `features/BACKLOG.md`, set `STATE.md`
    **Phase** to `validate`, append a History line.
-6. Tell the user tests pass and `/validate` is next.
+6. Commit and push per `.claude/GIT.md` (stage: test).
+7. Tell the user tests pass and `/validate` is next.

@@ -32,3 +32,18 @@ loop(
 
 Start with `/spec`. From there, either drive stages one at a time or run
 `/dev-loop` and let it chain through until it needs you.
+
+## Starting a new project
+
+Clone into a **new folder name** (not `scaffold-template`):
+
+```
+git clone https://github.com/barrven/scaffold-template.git my-app
+cd my-app
+```
+
+Then run `/spec`. That replaces this clone's git history with a fresh repo
+so you never push back to the scaffold: **`dev`** is daily work (commit +
+push after every stage), **`master`** is the last accepted product (updated
+on `/accept` and `/retro`). It will offer to create a new GitHub repo.
+The policy the model follows is `.claude/GIT.md`.

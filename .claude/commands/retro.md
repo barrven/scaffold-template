@@ -40,4 +40,7 @@ work first. `backlog` items in the slice are fine (mid-slice retro).
      `backlog` item and **Phase** to `implement`. If the user says the
      project is complete, leave **Phase** as `retro` and leave remaining
      items as they are (or `deferred` if the user wants them parked).
-6. Append a History line and hand back to the user.
+6. Append a History line.
+7. Commit and push per `.claude/GIT.md` (stage: retro), including the
+   `dev` → `master` merge.
+8. Hand back to the user.

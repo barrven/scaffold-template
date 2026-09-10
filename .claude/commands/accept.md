@@ -39,4 +39,8 @@ so spec learning does not wait until the whole product is done.
    - **Reject:** ask the user whether to drop the feature entirely or send it
      back to `/features` for rethinking; act accordingly (`status: blocked`
      or remove it from the backlog per their answer).
-6. Append a `STATE.md` History line and tell the user what's next.
+6. Append a `STATE.md` History line.
+7. Commit and push per `.claude/GIT.md` (stage: accept). Merge `dev` →
+   `master` only if the user accepted; request-changes and reject stay on
+   `dev`.
+8. Tell the user what's next.
