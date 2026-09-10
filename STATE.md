@@ -12,6 +12,12 @@ lifecycle. Every stage command reads it first and updates it last.
 
 `spec -> features -> [implement -> test -> validate -> accept]* -> retro -> (back to spec)`
 
+The inner loop (`implement`…`accept`) only ships the **current slice**:
+features whose `iteration` equals **Outer iteration**. Other features stay
+`deferred` until a later `/features`. `/retro` runs when that slice is done,
+or mid-slice when `/accept` chooses "retro now"; it does not wait for the
+whole backlog.
+
 Valid values for **Phase**: `spec`, `features`, `implement`, `test`, `validate`,
 `accept`, `retro`.
 

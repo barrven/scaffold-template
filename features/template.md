@@ -1,8 +1,9 @@
 ---
 id: 000
 title: <short title>
-status: backlog
+status: deferred
 priority: medium
+iteration: later
 ---
 
 ## Description

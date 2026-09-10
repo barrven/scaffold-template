@@ -6,8 +6,8 @@ You are running the **implement** stage of the dev loop's inner cycle
 (`implement > test > validate > accept`).
 
 1. Read `STATE.md` for the active feature, then read that feature's file in
-   `features/`. If there is no active feature, tell the user to run
-   `/features` first.
+   `features/`. If there is no active feature, or it is `deferred` / not in
+   the current **Outer iteration**, tell the user to run `/features` first.
 2. Set that feature's frontmatter `status: implementing`.
 3. Implement it. Follow the repo's existing conventions; don't add scope
    beyond the feature's Description and Acceptance Criteria. If you discover

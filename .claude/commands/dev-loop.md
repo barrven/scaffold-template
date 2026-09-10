@@ -12,6 +12,11 @@ loop(
 )
 ```
 
+The inner loop only ships the **current slice** (features scheduled for
+`STATE.md`'s **Outer iteration**). `deferred` features are not inner-loop
+work; they wait for a later `/features` after `/retro`. `/accept` may send
+the loop to `/retro` before the slice is empty.
+
 The individual stages are documented in `.claude/commands/spec.md`,
 `features.md`, `implement.md`, `test.md`, `validate.md`, `accept.md`, and
 `retro.md`. Read the one you're about to run before running it, and follow
@@ -27,13 +32,16 @@ Procedure:
 3. Move to the phase `STATE.md` now points to and repeat, without waiting for
    the user to type the next `/command` themselves — that's the point of
    this orchestrator.
-4. Keep looping through the inner cycle across every backlog feature, then
+4. Keep looping through the inner cycle across the **current slice**, then
    through the outer cycle across iterations, **except** stop and hand
    control back to the user at any of these:
    - The `accept` stage's human gate (never skip or auto-answer it).
    - `spec` or `features` surfacing a genuine open question you can't
      resolve without the user.
-   - `retro` concluding the project is complete for now.
+   - `retro` (it always asks the user; never auto-answer whether to revise
+     the spec or keep building). After retro, stop even if `STATE.md` now
+     points at `spec` / `features` / `implement` — the user decides whether
+     to keep going.
    - Anything failing repeatedly (e.g. `validate` sends the same feature
      back to `implement` more than twice) — stop and ask rather than
      looping silently.

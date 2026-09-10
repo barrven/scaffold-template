@@ -2,7 +2,10 @@
 description: "Dev-loop stage 1: establish or revise the product spec"
 ---
 
-You are running the **spec** stage of the dev loop (`spec > features > loop(implement > test > validate > accept) > retro`).
+You are running the **spec** stage of the dev loop (`spec > features >
+loop(implement > test > validate > accept) > retro`). `/features` will only
+schedule an iteration-sized slice; `/retro` is what bumps **Outer iteration**
+when a slice completes.
 
 1. Read `STATE.md` and `docs/SPEC.md` first.
 2. If `docs/SPEC.md` has no real content yet (fresh scaffold): interview the user
@@ -16,7 +19,8 @@ You are running the **spec** stage of the dev loop (`spec > features > loop(impl
    bottom of the spec) and confirm the revision with the user before writing.
 4. Write the result back to `docs/SPEC.md`, keeping the "Changelog of spec
    revisions" section append-only.
-5. Update `STATE.md`: bump the outer iteration if this is a fresh loop,
-   set **Phase** to `features`, append a one-line History entry.
+5. Update `STATE.md`: if **Outer iteration** is 0, set it to 1 (first loop).
+   Do not bump it on a spec revision — `/retro` owns that bump when a slice
+   completes. Set **Phase** to `features`, append a one-line History entry.
 6. Tell the user the spec is set and that `/features` is next — don't run it
    yourself unless the user says to keep going.
