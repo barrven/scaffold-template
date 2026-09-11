@@ -33,6 +33,8 @@ loop(
 Start with `/spec`. From there, either drive stages one at a time or run
 `/dev-loop` and let it chain through until it needs you.
 
+How a slice, retro, and ad-hoc bugs work: [`docs/DEV-LOOP.md`](docs/DEV-LOOP.md).
+
 ## Starting a new project
 
 Clone into a **new folder name** (not `scaffold-template`):
