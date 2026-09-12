@@ -11,11 +11,18 @@ when a slice completes.
 2. If this is the first `/spec` (placeholder spec, outer iteration 0), run
    **New product repo** in `.claude/GIT.md` before editing anything — a
    cloned product must not keep the scaffold remote or history.
-3. If `docs/SPEC.md` has no real content yet (fresh scaffold): interview the user
-   conversationally to fill in Vision, Users, Core Requirements, Non-goals,
-   and Constraints. Ask only what you can't reasonably infer or default —
-   don't interrogate over things a reasonable default settles. Note anything
-   still unresolved under Open Questions rather than guessing at it.
+3. If `docs/SPEC.md` has no real content yet (fresh scaffold): ask the user to
+   choose their approach:
+   - **Interview mode**: conduct a conversational interview to fill in Vision,
+     Users, Core Requirements, Non-goals, and Constraints. Ask only what you
+     can't reasonably infer or default — don't interrogate over things a
+     reasonable default settles. Note anything unresolved under Open Questions
+     rather than guessing.
+   - **External spec mode**: ask the user for the path/filename of their
+     proposed spec document. Read it, validate it covers the required sections
+     (Vision, Users, Core Requirements, Non-goals, Constraints), then translate
+     it into the `docs/SPEC.md` format. Flag any missing sections under Open
+     Questions.
 4. If `docs/SPEC.md` already has content (a later loop iteration): this is a
    revision, not a first draft. Summarize what you believe changed since the
    last iteration (informed by `docs/CHANGELOG.md` and any retro notes at the
